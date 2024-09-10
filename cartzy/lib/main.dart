@@ -10,10 +10,21 @@ class mtyclass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.system,
-      theme: ThemeData(),
-      darkTheme: ThemeData(),
       home: myapp(),
+      themeMode: ThemeMode.system,
+      theme: ThemeData(
+        textTheme: const TextTheme(
+          displayLarge: TextStyle(
+            fontSize: 21,
+            fontWeight: FontWeight.bold,
+          ),
+          displayMedium: TextStyle(
+            fontSize: 11,
+            fontWeight: FontWeight.w500,
+            fontStyle: FontStyle.italic,
+          ),
+        ),
+      ),
     );
   }
 }
@@ -28,29 +39,23 @@ class myapp extends StatelessWidget {
         backgroundColor: Colors.amber,
         title: Text("My Theme Application"),
       ),
-      body: const Column(
+      body: Column(
         children: [
           Text(
             "Hello World",
-            style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+            style: Theme.of(context).textTheme.displayLarge,
           ),
           Text(
             "Hello World",
-            style: TextStyle(
-                fontSize: 11,
-                fontWeight: FontWeight.w500,
-                fontStyle: FontStyle.italic),
+            style: Theme.of(context).textTheme.displayMedium,
           ),
           Text(
             "Hello World",
-            style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+            style: Theme.of(context).textTheme.displayLarge,
           ),
           Text(
             "Hello World",
-            style: TextStyle(
-                fontSize: 11,
-                fontWeight: FontWeight.w500,
-                fontStyle: FontStyle.italic),
+            style: Theme.of(context).textTheme.displayMedium,
           ),
         ],
       ),
