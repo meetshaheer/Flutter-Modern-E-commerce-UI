@@ -43,7 +43,10 @@ class myapp extends StatelessWidget {
         children: [
           Text(
             "Hello World",
-            style: Theme.of(context).textTheme.displayLarge,
+            style: Theme.of(context)
+                .textTheme
+                .displayLarge!
+                .copyWith(color: Colors.amber[900]),
           ),
           Text(
             "Hello World",
@@ -55,7 +58,10 @@ class myapp extends StatelessWidget {
           ),
           Text(
             "Hello World",
-            style: Theme.of(context).textTheme.displayMedium,
+            style: Theme.of(context)
+                .textTheme
+                .displayMedium!
+                .copyWith(color: Colors.amberAccent[400]),
           ),
         ],
       ),
