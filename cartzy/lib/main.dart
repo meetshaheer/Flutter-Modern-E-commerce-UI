@@ -1,3 +1,4 @@
+import 'package:cartzy/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
@@ -10,21 +11,11 @@ class mtyclass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: myapp(),
-      themeMode: ThemeMode.system,
-      theme: ThemeData(
-        textTheme: const TextTheme(
-          displayLarge: TextStyle(
-            fontSize: 21,
-            fontWeight: FontWeight.bold,
-          ),
-          displayMedium: TextStyle(
-            fontSize: 11,
-            fontWeight: FontWeight.w500,
-            fontStyle: FontStyle.italic,
-          ),
-        ),
-      ),
+      themeMode: ThemeMode.dark,
+      //
+      darkTheme: CAppTheme.darktheme,
     );
   }
 }
@@ -56,13 +47,7 @@ class myapp extends StatelessWidget {
             "Hello World",
             style: Theme.of(context).textTheme.displayLarge,
           ),
-          Text(
-            "Hello World",
-            style: Theme.of(context)
-                .textTheme
-                .displayMedium!
-                .copyWith(color: Colors.amberAccent[400]),
-          ),
+          Text("Hello World", style: Theme.of(context).CA),
         ],
       ),
     );
