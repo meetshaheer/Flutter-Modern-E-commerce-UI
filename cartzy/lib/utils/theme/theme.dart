@@ -11,6 +11,7 @@ class CAppTheme {
     primaryColor: Colors.blueAccent,
     textTheme: CTextTheme.lightTextTheme,
   );
+
   static ThemeData darktheme = ThemeData(
     useMaterial3: true,
     scaffoldBackgroundColor: Colors.black,
