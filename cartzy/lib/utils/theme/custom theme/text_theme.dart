@@ -7,6 +7,12 @@ class CTextTheme {
     headlineLarge: const TextStyle().copyWith(fontSize: 32.0, fontWeight: FontWeight.bold),
     headlineMedium: const TextStyle().copyWith(fontSize: 24.0, fontWeight: FontWeight.w600),
     headlineSmall: const TextStyle().copyWith(fontSize: 18.0, fontWeight: FontWeight.w600),
+
+    //
+
+    titleLarge: const TextStyle().copyWith(fontSize: 16.0, fontWeight: FontWeight.w600),
+    titleMedium: const TextStyle().copyWith(fontSize: 16.0, fontWeight: FontWeight.w500),
+    titleSmall: const TextStyle().copyWith(fontSize: 16.0, fontWeight: FontWeight.w400),
   );
   //
   static TextTheme darkTextTheme = const TextTheme(
