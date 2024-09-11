@@ -6,16 +6,16 @@ class CAppTheme {
 
   static ThemeData lighttheme = ThemeData(
     useMaterial3: true,
-    brightness: Brightness.light,
     scaffoldBackgroundColor: Colors.white,
-    primaryColor: Colors.amberAccent[900],
+    brightness: Brightness.light,
+    primaryColor: Colors.blueAccent,
     textTheme: CTextTheme.lightTextTheme,
   );
   static ThemeData darktheme = ThemeData(
     useMaterial3: true,
-    brightness: Brightness.dark,
     scaffoldBackgroundColor: Colors.black,
-    primaryColor: Colors.amberAccent[900],
-    textTheme: CTextTheme.lightTextTheme,
+    brightness: Brightness.dark,
+    primaryColor: Colors.blueAccent,
+    textTheme: CTextTheme.darkTextTheme,
   );
 }
