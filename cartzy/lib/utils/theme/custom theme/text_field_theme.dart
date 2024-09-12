@@ -22,7 +22,7 @@ class TTextFormFieldTheme {
       borderRadius: BorderRadius.circular(CSizes.inputFieldRadius),
       borderSide: const BorderSide(width: 1, color: CColors.grey),
     ),
-    focusedBorder: const OutlineInputBorder().copyWith(
+    focusedBorder:const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(CSizes.inputFieldRadius),
       borderSide: const BorderSide(width: 1, color: CColors.dark),
     ),
