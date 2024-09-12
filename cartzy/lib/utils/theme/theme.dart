@@ -20,3 +20,9 @@ class CAppTheme {
     textTheme: CTextTheme.darkTextTheme,
   );
 }
+
+class CTextTheme {
+  static var darkTextTheme;
+
+  static var lightTextTheme;
+}
