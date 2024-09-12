@@ -1,5 +1,4 @@
 import 'package:cartzy/utils/theme/theme.dart';
-import 'package:cartzy/utils/theme/theme_practice.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
@@ -13,8 +12,8 @@ class mtyclass extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const myAppp(),
-      themeMode: ThemeMode.light,
+      home: const myapp(),
+      themeMode: ThemeMode.system,
       // theme: CAppTheme.lighttheme,
       // darkTheme: CAppTheme.darktheme,
       theme: ThemeData(
