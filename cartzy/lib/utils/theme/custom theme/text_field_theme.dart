@@ -2,8 +2,8 @@ import 'package:cartzy/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 import '../../constants/sizes.dart';
 
-class TTextFormFieldTheme {
-  TTextFormFieldTheme._();
+class CTextFormFieldTheme {
+  CTextFormFieldTheme._();
 
   static InputDecorationTheme lightInputDecorationTheme = InputDecorationTheme(
     errorMaxLines: 3,

@@ -1,3 +1,4 @@
+import 'package:cartzy/utils/constants/image_strings.dart';
 import 'package:cartzy/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -30,6 +31,28 @@ class myapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text("data");
+    return Scaffold(
+        appBar: AppBar(),
+        body: Stack(
+          children: [
+            PageView(
+              children: [
+                Column(
+                  children: [
+                    Image(
+                      width: 400,
+                      image: AssetImage(CImages.onBoardingImage1),
+                    ),
+                    Text(
+                      "Chose your product",
+                      style: Theme.of(context).textTheme.headlineMedium,
+                      textAlign: TextAlign.center,
+                    )
+                  ],
+                )
+              ],
+            )
+          ],
+        ));
   }
 }
