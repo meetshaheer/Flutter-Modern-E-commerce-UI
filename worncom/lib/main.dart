@@ -16,7 +16,7 @@ class mtyclass extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: signup(),
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.system,
       theme: CAppTheme.lightTheme,
       darkTheme: CAppTheme.darkTheme,
     );
