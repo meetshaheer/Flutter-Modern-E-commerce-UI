@@ -4,8 +4,6 @@ import 'package:worncome/screens/login/divider.dart';
 import 'package:worncome/screens/login/login.dart';
 import 'package:worncome/screens/login/socialLoginButtons.dart';
 import 'package:worncome/screens/signup/signupForm.dart';
-import 'package:worncome/utils/constants/colors.dart';
-import 'package:worncome/utils/constants/image_strings.dart';
 import 'package:worncome/utils/constants/sizes.dart';
 import 'package:worncome/utils/theme/theme.dart';
 
