@@ -5,38 +5,68 @@ import 'package:cartzy/utils/constants/sizes.dart';
 import 'package:cartzy/utils/constants/strings.dart';
 import 'package:flutter/material.dart';
 
-class onboarding extends StatelessWidget {
-  const onboarding({super.key});
+class onboarding extends StatefulWidget {
+  onboarding({super.key});
+
+  @override
+  State<onboarding> createState() => _onboardingState();
+}
+
+class _onboardingState extends State<onboarding> {
+  int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
-        body: Padding(
-          padding: const EdgeInsets.all(CSizes.defaultSpace),
-          child: Stack(
-            children: [
-              PageView(
-                children: const [
-                  customOnBoarding(
-                    headline: CStrings.onBoardingTitle1,
-                    description: CStrings.onBoardingSubTitle1,
-                    onBoardingImage: CImages.onBoardingImage1,
-                  ),
-                  customOnBoarding(
-                    headline: CStrings.onBoardingTitle2,
-                    description: CStrings.onBoardingSubTitle2,
-                    onBoardingImage: CImages.onBoardingImage2,
-                  ),
-                  customOnBoarding(
-                    headline: CStrings.onBoardingTitle3,
-                    description: CStrings.onBoardingSubTitle3,
-                    onBoardingImage: CImages.onBoardingImage3,
-                  ),
-                ],
-              ),
-            ],
+      appBar: AppBar(
+        actions: [
+          TextButton(
+            onPressed: () {},
+            child: Text(
+              "Skip",
+              style: Theme.of(context).textTheme.bodySmall,
+            ),
           ),
-        ));
+        ],
+      ),
+      body: Stack(
+        children: [
+          PageView.builder(
+            onPageChanged: (int index) {
+              setState(() {
+                currentIndex = index;
+              });
+            },
+            itemCount: contents.length,
+            itemBuilder: (context, index) {
+              return customOnBoarding(
+                headline: contents[index].title,
+                description: contents[index].desc,
+                onBoardingImage: contents[index].image,
+              );
+            },
+          ),
+          Positioned(
+            bottom: 70,
+            left: 30,
+            child: Container(
+              child: Row(
+                children: List.generate(
+                  contents.length,
+                  (index) => Padding(
+                    padding: const EdgeInsets.all(3.0),
+                    child: Container(
+                      height: 10,
+                      width: currentIndex == index ? 30 : 10,
+                      decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(30)),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
