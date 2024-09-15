@@ -1,7 +1,7 @@
 import 'package:worncome/screens/login/login.dart';
-import 'package:worncome/screens/on_boarding/customOnboarding/onboardingNavButton.dart';
-import 'package:worncome/screens/on_boarding/customOnboarding/onboardingNavDots.dart';
-import 'package:worncome/screens/on_boarding/customOnboarding/onboarding_custom.dart';
+import 'package:worncome/screens/on%20boarding/customOnboarding/onboardingNavButton.dart';
+import 'package:worncome/screens/on%20boarding/customOnboarding/onboardingNavDots.dart';
+import 'package:worncome/screens/on%20boarding/customOnboarding/onboarding_custom.dart';
 import 'package:worncome/utils/constants/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:worncome/utils/theme/theme.dart';

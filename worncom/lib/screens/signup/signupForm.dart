@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:worncome/screens/email%20verification/verifyEmail.dart';
 import 'package:worncome/utils/constants/colors.dart';
 import 'package:worncome/utils/constants/sizes.dart';
 
@@ -52,9 +53,7 @@ class signupForm extends StatelessWidget {
           ),
           TextFormField(
             decoration: const InputDecoration(
-                prefixIcon: Icon(Iconsax.password_check),
-                suffixIcon: Icon(Iconsax.eye_slash),
-                labelText: "Password"),
+                prefixIcon: Icon(Iconsax.password_check), suffixIcon: Icon(Iconsax.eye_slash), labelText: "Password"),
           ),
           const SizedBox(
             height: CSizes.spaceBtwItems,
@@ -102,7 +101,14 @@ class signupForm extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => verifiyEmail(),
+                  ),
+                );
+              },
               child: Text(
                 "Create Account",
                 style: Theme.of(context).textTheme.titleMedium!.copyWith(color: Colors.white),

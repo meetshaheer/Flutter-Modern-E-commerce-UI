@@ -14,8 +14,10 @@ class signup extends StatelessWidget {
   Widget build(BuildContext context) {
     final bool dark = CAppTheme.isDarkMode(context);
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         leading: IconButton(
+          iconSize: CSizes.iconLg,
           onPressed: () {
             Navigator.push(
               context,
@@ -31,7 +33,6 @@ class signup extends StatelessWidget {
               color: dark ? Colors.white : Colors.black,
             ),
           ),
-          iconSize: 25,
         ),
       ),
       body: SingleChildScrollView(
