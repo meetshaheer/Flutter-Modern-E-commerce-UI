@@ -113,9 +113,13 @@ class signup extends StatelessWidget {
                         const Text("I agree to", style: TextStyle(fontSize: 13)),
                         TextButton(
                           onPressed: () {},
-                          child: const Text(
+                          child: Text(
                             "Privacy Policy",
-                            style: TextStyle(decoration: TextDecoration.underline, fontSize: 13),
+                            style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              fontSize: 13,
+                              color: dark ? Colors.white : Colors.black,
+                            ),
                           ),
                         ),
                         const Text("and", style: TextStyle(fontSize: 13)),
@@ -127,7 +131,20 @@ class signup extends StatelessWidget {
                           ),
                         ),
                       ],
-                    )
+                    ),
+                    const SizedBox(
+                      height: CSizes.spaceBtwSections / 2,
+                    ),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text(
+                          "Create Account",
+                          style: Theme.of(context).textTheme.titleMedium!.copyWith(color: Colors.white),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               )
