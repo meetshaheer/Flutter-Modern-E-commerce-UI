@@ -1,3 +1,4 @@
+import 'package:worncome/screens/login/login.dart';
 import 'package:worncome/screens/on_boarding/customOnboarding/onboardingNavButton.dart';
 import 'package:worncome/screens/on_boarding/customOnboarding/onboardingNavDots.dart';
 import 'package:worncome/screens/on_boarding/customOnboarding/onboarding_custom.dart';
@@ -21,7 +22,14 @@ class _onboardingState extends State<onboarding> {
       appBar: AppBar(
         actions: [
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => login(),
+                ),
+              );
+            },
             child: Text(
               "Skip",
               style: Theme.of(context).textTheme.bodySmall,

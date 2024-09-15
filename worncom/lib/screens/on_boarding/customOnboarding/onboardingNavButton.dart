@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:worncome/screens/login/login.dart';
 import 'package:worncome/screens/on_boarding/onBoarding.dart';
 import 'package:worncome/utils/constants/strings.dart';
 
@@ -18,7 +19,7 @@ class onBoardingNavButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: () {
           if (currentIndex == contents.length - 1) {
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => onboarding()));
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const login()));
           }
         },
         style: ElevatedButton.styleFrom(shape: const CircleBorder()),
