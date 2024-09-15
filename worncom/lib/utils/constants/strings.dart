@@ -1,5 +1,3 @@
-import 'package:flutter/foundation.dart';
-
 class onBoardingContent {
   final String title;
   final String desc;

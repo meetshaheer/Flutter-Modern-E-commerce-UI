@@ -1,13 +1,8 @@
 import 'package:worncome/screens/on_boarding/customOnboarding/onboardingNavButton.dart';
 import 'package:worncome/screens/on_boarding/customOnboarding/onboardingNavDots.dart';
 import 'package:worncome/screens/on_boarding/customOnboarding/onboarding_custom.dart';
-import 'package:worncome/utils/constants/colors.dart';
-import 'package:worncome/utils/constants/font_family.dart';
-import 'package:worncome/utils/constants/image_strings.dart';
-import 'package:worncome/utils/constants/sizes.dart';
 import 'package:worncome/utils/constants/strings.dart';
 import 'package:flutter/material.dart';
-import 'package:worncome/utils/theme/custom%20theme/appbar_theme.dart';
 import 'package:worncome/utils/theme/theme.dart';
 
 class onboarding extends StatefulWidget {
