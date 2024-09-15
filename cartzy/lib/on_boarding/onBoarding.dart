@@ -71,7 +71,7 @@ class _onboardingState extends State<onboarding> {
             child: ElevatedButton(
               onPressed: () {
                 if (currentIndex == contents.length - 1) {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => onboarding()));
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => onboarding()));
                 }
               },
               style: ElevatedButton.styleFrom(shape: CircleBorder()),
