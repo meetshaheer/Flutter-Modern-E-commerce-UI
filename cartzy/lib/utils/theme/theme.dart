@@ -9,8 +9,8 @@ import 'package:cartzy/utils/theme/custom%20theme/text_field_theme.dart';
 import 'package:cartzy/utils/theme/custom%20theme/text_theme.dart';
 import 'package:flutter/material.dart';
 
-class TAppTheme {
-  TAppTheme._();
+class CAppTheme {
+  CAppTheme._();
 
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,

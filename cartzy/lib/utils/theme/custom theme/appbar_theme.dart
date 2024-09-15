@@ -2,7 +2,7 @@ import 'package:cartzy/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import '../../constants/colors.dart';
 
-class CAppBarTheme{
+class CAppBarTheme {
   CAppBarTheme._();
 
   static const lightAppBarTheme = AppBarTheme(
