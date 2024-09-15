@@ -14,7 +14,6 @@ class onboarding extends StatefulWidget {
 
 class _onboardingState extends State<onboarding> {
   int currentIndex = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,18 +52,19 @@ class _onboardingState extends State<onboarding> {
               child: Row(
                 children: List.generate(
                   contents.length,
-                  (index) => Padding(
-                    padding: const EdgeInsets.all(3.0),
+                  (Index) => Padding(
+                    padding: const EdgeInsets.all(2.0),
                     child: Container(
+                      width: currentIndex == Index ? 40 : 10,
                       height: 10,
-                      width: currentIndex == index ? 30 : 10,
-                      decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(30)),
+                      decoration:
+                          const BoxDecoration(color: Colors.black, borderRadius: BorderRadius.all(Radius.circular(30))),
                     ),
                   ),
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );
