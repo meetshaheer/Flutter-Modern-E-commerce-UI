@@ -1,6 +1,6 @@
-import 'package:cartzy/utils/constants/font_family.dart';
-import 'package:cartzy/utils/constants/image_strings.dart';
-import 'package:cartzy/utils/constants/sizes.dart';
+import 'package:worncome/utils/constants/font_family.dart';
+import 'package:worncome/utils/constants/image_strings.dart';
+import 'package:worncome/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
 class customOnBoarding extends StatelessWidget {

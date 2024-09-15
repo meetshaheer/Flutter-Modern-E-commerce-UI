@@ -1,5 +1,5 @@
-import 'package:cartzy/screens/on_boarding/onBoarding.dart';
-import 'package:cartzy/utils/theme/theme.dart';
+import 'package:worncome/screens/on_boarding/onBoarding.dart';
+import 'package:worncome/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {

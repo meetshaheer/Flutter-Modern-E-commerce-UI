@@ -1,8 +1,8 @@
-import 'package:cartzy/screens/on_boarding/customOnboarding/onboarding_custom.dart';
-import 'package:cartzy/utils/constants/font_family.dart';
-import 'package:cartzy/utils/constants/image_strings.dart';
-import 'package:cartzy/utils/constants/sizes.dart';
-import 'package:cartzy/utils/constants/strings.dart';
+import 'package:worncome/screens/on_boarding/customOnboarding/onboarding_custom.dart';
+import 'package:worncome/utils/constants/font_family.dart';
+import 'package:worncome/utils/constants/image_strings.dart';
+import 'package:worncome/utils/constants/sizes.dart';
+import 'package:worncome/utils/constants/strings.dart';
 import 'package:flutter/material.dart';
 
 class onboarding extends StatefulWidget {

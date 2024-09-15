@@ -1,4 +1,4 @@
-import 'package:cartzy/utils/constants/sizes.dart';
+import 'package:worncome/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import '../../constants/colors.dart';
 
