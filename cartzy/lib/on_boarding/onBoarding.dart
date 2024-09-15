@@ -47,7 +47,7 @@ class _onboardingState extends State<onboarding> {
           ),
           Positioned(
             bottom: 70,
-            left: 30,
+            left: 20,
             child: Container(
               child: Row(
                 children: List.generate(
@@ -62,6 +62,21 @@ class _onboardingState extends State<onboarding> {
                     ),
                   ),
                 ),
+              ),
+            ),
+          ),
+          Positioned(
+            bottom: 50,
+            right: 20,
+            child: ElevatedButton(
+              onPressed: () {
+                if (currentIndex == contents.length - 1) {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => onboarding()));
+                }
+              },
+              style: ElevatedButton.styleFrom(shape: CircleBorder()),
+              child: const Icon(
+                Icons.arrow_forward_ios,
               ),
             ),
           ),
