@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:worncome/screens/signup/signup.dart';
 import 'package:worncome/utils/constants/sizes.dart';
 
 class inputForm extends StatelessWidget {
@@ -66,7 +67,9 @@ class inputForm extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: OutlinedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, (MaterialPageRoute(builder: (context) => const signup())));
+              },
               child: Text(
                 "Create Account",
                 style: Theme.of(context).textTheme.titleMedium,

@@ -1,5 +1,6 @@
 import 'package:worncome/screens/login/login.dart';
 import 'package:worncome/screens/on_boarding/onBoarding.dart';
+import 'package:worncome/screens/signup/signup.dart';
 import 'package:worncome/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class mtyclass extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: login(),
+      home: signup(),
       themeMode: ThemeMode.system,
       theme: CAppTheme.lightTheme,
       darkTheme: CAppTheme.darkTheme,
