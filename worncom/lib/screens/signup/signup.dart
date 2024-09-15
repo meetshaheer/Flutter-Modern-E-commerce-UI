@@ -51,65 +51,86 @@ class signup extends StatelessWidget {
                       fontFamily: "Poppins",
                     ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: CSizes.spaceBtwSections,
               ),
               // Form Input
               Form(
-                  child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Expanded(
-                        child: TextFormField(
-                          expands: false,
-                          decoration: InputDecoration(prefixIcon: Icon(Iconsax.user), labelText: "First Name"),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Expanded(
+                          child: TextFormField(
+                            expands: false,
+                            decoration: const InputDecoration(prefixIcon: Icon(Iconsax.user), labelText: "First Name"),
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        width: CSizes.spaceBtwItems,
-                      ),
-                      Expanded(
-                        child: TextFormField(
-                          expands: false,
-                          decoration: InputDecoration(prefixIcon: Icon(Iconsax.user), labelText: "Last Name"),
+                        const SizedBox(
+                          width: CSizes.spaceBtwItems,
                         ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: CSizes.spaceBtwItems,
-                  ),
-                  TextFormField(
-                    expands: false,
-                    decoration: InputDecoration(prefixIcon: Icon(Iconsax.user_edit), labelText: "Username"),
-                  ),
-                  SizedBox(
-                    height: CSizes.spaceBtwItems,
-                  ),
-                  TextFormField(
-                    expands: false,
-                    decoration: InputDecoration(prefixIcon: Icon(Iconsax.direct), labelText: "Email"),
-                  ),
-                  SizedBox(
-                    height: CSizes.spaceBtwItems,
-                  ),
-                  TextFormField(
-                    expands: false,
-                    decoration: InputDecoration(
-                        prefixIcon: Icon(Iconsax.password_check),
-                        suffixIcon: Icon(Iconsax.eye_slash),
-                        labelText: "Password"),
-                  ),
-                  SizedBox(
-                    height: CSizes.spaceBtwItems,
-                  ),
-                  TextFormField(
-                    expands: false,
-                    decoration: InputDecoration(prefixIcon: Icon(Iconsax.call), labelText: "Phone Number"),
-                  ),
-                ],
-              ))
+                        Expanded(
+                          child: TextFormField(
+                            expands: false,
+                            decoration: const InputDecoration(prefixIcon: Icon(Iconsax.user), labelText: "Last Name"),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: CSizes.spaceBtwItems,
+                    ),
+                    TextFormField(
+                      decoration: const InputDecoration(prefixIcon: Icon(Iconsax.user_edit), labelText: "Username"),
+                    ),
+                    const SizedBox(
+                      height: CSizes.spaceBtwItems,
+                    ),
+                    TextFormField(
+                      decoration: const InputDecoration(prefixIcon: Icon(Iconsax.direct), labelText: "Email"),
+                    ),
+                    const SizedBox(
+                      height: CSizes.spaceBtwItems,
+                    ),
+                    TextFormField(
+                      decoration: const InputDecoration(
+                          prefixIcon: Icon(Iconsax.password_check),
+                          suffixIcon: Icon(Iconsax.eye_slash),
+                          labelText: "Password"),
+                    ),
+                    const SizedBox(
+                      height: CSizes.spaceBtwItems,
+                    ),
+                    TextFormField(
+                      decoration: const InputDecoration(prefixIcon: Icon(Iconsax.call), labelText: "Phone Number"),
+                    ),
+                    const SizedBox(
+                      height: CSizes.spaceBtwSections / 2,
+                    ),
+                    Row(
+                      children: [
+                        Checkbox(value: true, onChanged: (Values) {}),
+                        const Text("I agree to", style: TextStyle(fontSize: 13)),
+                        TextButton(
+                          onPressed: () {},
+                          child: const Text(
+                            "Privacy Policy",
+                            style: TextStyle(decoration: TextDecoration.underline, fontSize: 13),
+                          ),
+                        ),
+                        const Text("and", style: TextStyle(fontSize: 13)),
+                        TextButton(
+                          onPressed: () {},
+                          child: const Text(
+                            "Terms of use",
+                            style: TextStyle(decoration: TextDecoration.underline, fontSize: 13),
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              )
             ],
           ),
         ),
