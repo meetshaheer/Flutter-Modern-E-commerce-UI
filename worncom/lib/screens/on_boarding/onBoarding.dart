@@ -1,4 +1,4 @@
-import 'package:cartzy/on_boarding/customOnboarding/onboarding_custom.dart';
+import 'package:cartzy/screens/on_boarding/customOnboarding/onboarding_custom.dart';
 import 'package:cartzy/utils/constants/font_family.dart';
 import 'package:cartzy/utils/constants/image_strings.dart';
 import 'package:cartzy/utils/constants/sizes.dart';

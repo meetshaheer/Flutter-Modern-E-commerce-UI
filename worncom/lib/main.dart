@@ -1,7 +1,4 @@
-import 'package:cartzy/on_boarding/onBoarding.dart';
-import 'package:cartzy/utils/constants/font_family.dart';
-import 'package:cartzy/utils/constants/image_strings.dart';
-import 'package:cartzy/utils/constants/sizes.dart';
+import 'package:cartzy/screens/on_boarding/onBoarding.dart';
 import 'package:cartzy/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 
