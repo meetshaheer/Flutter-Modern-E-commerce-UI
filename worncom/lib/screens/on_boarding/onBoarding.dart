@@ -1,9 +1,14 @@
+import 'package:worncome/screens/on_boarding/customOnboarding/onboardingNavButton.dart';
+import 'package:worncome/screens/on_boarding/customOnboarding/onboardingNavDots.dart';
 import 'package:worncome/screens/on_boarding/customOnboarding/onboarding_custom.dart';
+import 'package:worncome/utils/constants/colors.dart';
 import 'package:worncome/utils/constants/font_family.dart';
 import 'package:worncome/utils/constants/image_strings.dart';
 import 'package:worncome/utils/constants/sizes.dart';
 import 'package:worncome/utils/constants/strings.dart';
 import 'package:flutter/material.dart';
+import 'package:worncome/utils/theme/custom%20theme/appbar_theme.dart';
+import 'package:worncome/utils/theme/theme.dart';
 
 class onboarding extends StatefulWidget {
   onboarding({super.key});
@@ -16,6 +21,7 @@ class _onboardingState extends State<onboarding> {
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
+    final dark = CAppTheme.isDarkMode(context);
     return Scaffold(
       appBar: AppBar(
         actions: [
@@ -45,41 +51,8 @@ class _onboardingState extends State<onboarding> {
               );
             },
           ),
-          Positioned(
-            bottom: 70,
-            left: 20,
-            child: Container(
-              child: Row(
-                children: List.generate(
-                  contents.length,
-                  (Index) => Padding(
-                    padding: const EdgeInsets.all(2.0),
-                    child: Container(
-                      width: currentIndex == Index ? 40 : 10,
-                      height: 10,
-                      decoration:
-                          const BoxDecoration(color: Colors.black, borderRadius: BorderRadius.all(Radius.circular(30))),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
-          Positioned(
-            bottom: 50,
-            right: 20,
-            child: ElevatedButton(
-              onPressed: () {
-                if (currentIndex == contents.length - 1) {
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => onboarding()));
-                }
-              },
-              style: ElevatedButton.styleFrom(shape: CircleBorder()),
-              child: const Icon(
-                Icons.arrow_forward_ios,
-              ),
-            ),
-          ),
+          navigationDots(currentIndex: currentIndex, dark: dark),
+          onBoardingNavButton(currentIndex: currentIndex),
         ],
       ),
     );

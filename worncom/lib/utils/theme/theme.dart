@@ -45,4 +45,8 @@ class CAppTheme {
     outlinedButtonTheme: COutlinedButtonTheme.darkOutlinedButtonTheme,
     inputDecorationTheme: CTextFormFieldTheme.darkInputDecorationTheme,
   );
+
+  static bool isDarkMode(BuildContext context) {
+    return Theme.of(context).brightness == Brightness.dark;
+  }
 }
