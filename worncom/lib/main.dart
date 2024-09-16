@@ -1,6 +1,4 @@
-import 'package:worncome/screens/account%20creation/accountCreationMsg.dart';
-import 'package:worncome/screens/email%20verification/verifyEmail.dart';
-import 'package:worncome/screens/forgot%20password/forgotPassword.dart';
+import 'package:worncome/screens/on%20boarding/onBoarding.dart';
 import 'package:worncome/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +13,7 @@ class mtyclass extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: forgotPassword(),
+      home: onboarding(),
       themeMode: ThemeMode.system,
       theme: CAppTheme.lightTheme,
       darkTheme: CAppTheme.darkTheme,

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:worncome/screens/account%20creation/accountCreationMsg.dart';
 import 'package:worncome/screens/login/login.dart';
 import 'package:worncome/utils/constants/sizes.dart';
 
@@ -67,7 +66,7 @@ class forgotPassword extends StatelessWidget {
                       child: TextFormField(
                     decoration: const InputDecoration(
                         labelText: "E-mail",
-                          prefixIcon: Icon(
+                        prefixIcon: Icon(
                           Iconsax.forward,
                         )),
                   )),
