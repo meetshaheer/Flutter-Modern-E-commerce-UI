@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:worncome/screens/account%20creation/accountCreationMsg.dart';
 import 'package:worncome/screens/login/login.dart';
+import 'package:worncome/screens/signup/signupForm.dart';
 import 'package:worncome/utils/constants/sizes.dart';
 
 class verifiyEmail extends StatelessWidget {
@@ -58,7 +59,7 @@ class verifiyEmail extends StatelessWidget {
                     height: CSizes.spaceBtwItems,
                   ),
                   Text(
-                    "support@worcom.com",
+                    signupEmailController.text,
                     style: Theme.of(context).textTheme.labelMedium!.copyWith(fontFamily: "Poppins"),
                   ),
                   const SizedBox(

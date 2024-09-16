@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:worncome/screens/forgot%20password/forgotPassword.dart';
+import 'package:worncome/screens/on%20boarding/onBoarding.dart';
 import 'package:worncome/screens/signup/signup.dart';
 import 'package:worncome/utils/constants/sizes.dart';
 
@@ -18,38 +19,46 @@ class _inputFormState extends State<inputForm> {
   TextEditingController loginPasswordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    final bool isnull = (loginEmailController.text.isEmpty && loginPasswordController.text.isEmpty);
     void nullFields() {
-      showDialog(
-        context: context,
-        builder: (context) {
-          return AlertDialog(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
-            ),
-            title: Text(
-              "Oops...",
-              style: Theme.of(context).textTheme.titleLarge,
-            ),
-            content: Text("Please fillup the fields with correct username and password, Thanks"),
-            actions: [
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(padding: EdgeInsets.symmetric(vertical: 15)),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  child: Text(
-                    "Go Back",
-                    style: Theme.of(context).textTheme.titleMedium!.copyWith(color: Colors.white),
+      if (loginEmailController.text.isEmpty && loginPasswordController.text.isEmpty) {
+        showDialog(
+          context: context,
+          builder: (context) {
+            return AlertDialog(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              title: Text(
+                "Oops...",
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+              content: Text("Please fillup the fields with correct username and password, Thanks"),
+              actions: [
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(padding: EdgeInsets.symmetric(vertical: 15)),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: Text(
+                      "Go Back",
+                      style: Theme.of(context).textTheme.titleMedium!.copyWith(color: Colors.white),
+                    ),
                   ),
                 ),
-              ),
-            ],
-          );
-        },
-      );
+              ],
+            );
+          },
+        );
+      } else {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => onboarding(),
+          ),
+        );
+      }
     }
 
     return Form(
@@ -107,9 +116,7 @@ class _inputFormState extends State<inputForm> {
             child: ElevatedButton(
               onPressed: () {
                 setState(() {
-                  if (isnull) {
-                    nullFields();
-                  }
+                  nullFields();
                 });
               },
               child: Text(
