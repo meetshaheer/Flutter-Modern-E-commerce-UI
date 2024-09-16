@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:worncome/screens/login/login.dart';
+import 'package:worncome/utils/constants/colors.dart';
+import 'package:worncome/utils/theme/theme.dart';
 
 class bottomAppBar extends StatefulWidget {
   const bottomAppBar({super.key});
@@ -20,8 +21,12 @@ class _bottomAppBarState extends State<bottomAppBar> {
 
   @override
   Widget build(BuildContext context) {
+    final dark = CAppTheme.isDarkMode(context);
+
     return Scaffold(
       bottomNavigationBar: NavigationBar(
+        backgroundColor: dark ? CColors.black : CColors.white,
+        indicatorColor: dark ? CColors.white.withOpacity(0.1) : CColors.black.withOpacity(0.1),
         onDestinationSelected: (value) => selectedIndex(value),
         selectedIndex: _selectedIndex,
         height: 80,
@@ -42,7 +47,7 @@ class MyWidgets extends StatelessWidget {
   MyWidgets({super.key});
   List screen = [
     Container(
-      color: Colors.amber,
+      color: Colors.white,
     ),
     Container(
       color: const Color.fromARGB(255, 12, 173, 146),
