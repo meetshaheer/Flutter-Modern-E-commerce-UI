@@ -13,7 +13,7 @@ class headerPositionedBlock extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 350,
+      height: 370,
       decoration: BoxDecoration(color: CColors.primary, borderRadius: BorderRadius.circular(40)),
       padding: EdgeInsets.all(0),
       child: Stack(
