@@ -14,7 +14,7 @@ class headerPositionedBlock extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: 350,
-      color: CColors.primary,
+      decoration: BoxDecoration(color: CColors.primary, borderRadius: BorderRadius.circular(40)),
       padding: EdgeInsets.all(0),
       child: Stack(
         children: [
