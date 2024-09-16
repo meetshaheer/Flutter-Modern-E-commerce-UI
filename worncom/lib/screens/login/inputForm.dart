@@ -4,17 +4,59 @@ import 'package:worncome/screens/forgot%20password/forgotPassword.dart';
 import 'package:worncome/screens/signup/signup.dart';
 import 'package:worncome/utils/constants/sizes.dart';
 
-class inputForm extends StatelessWidget {
-  const inputForm({
+class inputForm extends StatefulWidget {
+  inputForm({
     super.key,
   });
 
   @override
+  State<inputForm> createState() => _inputFormState();
+}
+
+class _inputFormState extends State<inputForm> {
+  TextEditingController loginEmailController = TextEditingController();
+  TextEditingController loginPasswordController = TextEditingController();
+  @override
   Widget build(BuildContext context) {
+    final bool isnull = (loginEmailController.text.isEmpty && loginPasswordController.text.isEmpty);
+    void nullFields() {
+      showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            title: Text(
+              "Oops...",
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
+            content: Text("Please fillup the fields with correct username and password, Thanks"),
+            actions: [
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(padding: EdgeInsets.symmetric(vertical: 15)),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text(
+                    "Go Back",
+                    style: Theme.of(context).textTheme.titleMedium!.copyWith(color: Colors.white),
+                  ),
+                ),
+              ),
+            ],
+          );
+        },
+      );
+    }
+
     return Form(
       child: Column(
         children: [
           TextFormField(
+            controller: loginEmailController,
             decoration: const InputDecoration(
               prefixIcon: Icon(Iconsax.direct_right),
               labelText: "E-mail",
@@ -24,6 +66,7 @@ class inputForm extends StatelessWidget {
             height: CSizes.spaceBtwInputFields,
           ),
           TextFormField(
+            controller: loginPasswordController,
             obscureText: true,
             decoration: const InputDecoration(
               prefixIcon: Icon(Iconsax.password_check),
@@ -62,7 +105,13 @@ class inputForm extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  if (isnull) {
+                    nullFields();
+                  }
+                });
+              },
               child: Text(
                 "Sign In",
                 style: Theme.of(context).textTheme.titleMedium!.copyWith(color: Colors.white),
