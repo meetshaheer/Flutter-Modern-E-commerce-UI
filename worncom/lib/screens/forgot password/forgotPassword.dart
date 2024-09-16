@@ -54,18 +54,25 @@ class forgotPassword extends StatelessWidget {
                   const SizedBox(
                     height: CSizes.spaceBtwItems,
                   ),
-                  const SizedBox(
-                    height: CSizes.spaceBtwItems,
-                  ),
                   Text(
-                    textAlign: TextAlign.center,
-                    "Congratulations! Your Account Awaits. Verify Your Email To Start Shopping and Experience a world of Unrivaled Deals and Personalized Offers",
+                    "Don't worry sometimes people can forget too, enter your email and we will send your password is link.",
                     style: Theme.of(context).textTheme.labelMedium!.copyWith(
                           fontFamily: "Poppins",
                         ),
                   ),
                   const SizedBox(
-                    height: CSizes.spaceBtwItems,
+                    height: CSizes.spaceBtwSections * 2,
+                  ),
+                  Form(
+                      child: TextFormField(
+                    decoration: const InputDecoration(
+                        labelText: "E-mail",
+                          prefixIcon: Icon(
+                          Iconsax.forward,
+                        )),
+                  )),
+                  const SizedBox(
+                    height: CSizes.spaceBtwSections,
                   ),
                   SizedBox(
                     width: double.infinity,
@@ -74,29 +81,16 @@ class forgotPassword extends StatelessWidget {
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => accountCreated(),
+                            builder: (context) => login(),
                           ),
                         );
                       },
                       child: Text(
-                        "Continue",
+                        "Submit",
                         style: Theme.of(context).textTheme.titleMedium!.copyWith(color: Colors.white),
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    height: CSizes.spaceBtwItems,
-                  ),
-                  SizedBox(
-                    width: double.infinity,
-                    child: OutlinedButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Resend Email",
-                        style: Theme.of(context).textTheme.titleMedium,
-                      ),
-                    ),
-                  )
                 ],
               ),
             ),

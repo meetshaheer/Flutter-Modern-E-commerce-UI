@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:worncome/screens/forgot%20password/forgotPassword.dart';
 import 'package:worncome/screens/signup/signup.dart';
 import 'package:worncome/utils/constants/sizes.dart';
 
@@ -43,7 +44,14 @@ class inputForm extends StatelessWidget {
                 ],
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => forgotPassword(),
+                    ),
+                  );
+                },
                 child: const Text("Forgot Password?"),
               ),
             ],
