@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:worncome/screens/login/login.dart';
 import 'package:worncome/utils/constants/sizes.dart';
-import 'package:worncome/utils/theme/theme.dart';
 
 class verifiyEmail extends StatelessWidget {
   const verifiyEmail({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final bool dark = CAppTheme.isDarkMode(context);
     return Scaffold(
       appBar: AppBar(
         actions: [
