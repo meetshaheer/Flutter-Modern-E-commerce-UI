@@ -4,8 +4,8 @@ import 'package:worncome/screens/account%20creation/accountCreationMsg.dart';
 import 'package:worncome/screens/login/login.dart';
 import 'package:worncome/utils/constants/sizes.dart';
 
-class verifiyEmail extends StatelessWidget {
-  const verifiyEmail({super.key});
+class forgotPassword extends StatelessWidget {
+  const forgotPassword({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +17,7 @@ class verifiyEmail extends StatelessWidget {
           right: CSizes.defaultSpace,
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -38,28 +39,20 @@ class verifiyEmail extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Image(
-                    width: 300,
-                    height: 300,
-                    image: AssetImage(
-                      "assets/images/animations/sammy-line-man-receives-a-mail.png",
-                    ),
+                  const SizedBox(
+                    height: CSizes.appBarHeight,
                   ),
                   const SizedBox(
                     height: CSizes.spaceBtwItems,
                   ),
                   Text(
-                    "Verify your email address!",
+                    "Forget Password",
                     style: Theme.of(context).textTheme.headlineMedium!.copyWith(fontFamily: "Poppins"),
                   ),
                   const SizedBox(
                     height: CSizes.spaceBtwItems,
-                  ),
-                  Text(
-                    "support@worcom.com",
-                    style: Theme.of(context).textTheme.labelMedium!.copyWith(fontFamily: "Poppins"),
                   ),
                   const SizedBox(
                     height: CSizes.spaceBtwItems,
@@ -110,7 +103,6 @@ class verifiyEmail extends StatelessWidget {
           ],
         ),
       ),
-    
     );
   }
 }
