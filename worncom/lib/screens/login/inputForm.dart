@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:worncome/components/header/customHeader.dart';
 import 'package:worncome/screens/forgot%20password/forgotPassword.dart';
 import 'package:worncome/screens/on%20boarding/onBoarding.dart';
 import 'package:worncome/screens/signup/signup.dart';
@@ -55,7 +56,7 @@ class _inputFormState extends State<inputForm> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => onboarding(),
+            builder: (context) => customHeader(),
           ),
         );
       }
