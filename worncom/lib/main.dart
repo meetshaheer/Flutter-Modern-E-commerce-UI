@@ -1,6 +1,7 @@
 import 'dart:math';
 
-import 'package:worncome/components/bottomAppBar.dart';
+import 'package:worncome/components/bottomNavBar/bottomAppBar.dart';
+import 'package:worncome/components/header/customHeader.dart';
 import 'package:worncome/screens/login/login.dart';
 import 'package:worncome/screens/on%20boarding/onBoarding.dart';
 import 'package:worncome/utils/theme/theme.dart';
@@ -17,7 +18,7 @@ class mtyclass extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: onboarding(),
+      home: customHeader(),
       themeMode: ThemeMode.system,
       theme: CAppTheme.lightTheme,
       darkTheme: CAppTheme.darkTheme,

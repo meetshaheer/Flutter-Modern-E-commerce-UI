@@ -38,29 +38,6 @@ class _bottomAppBarState extends State<bottomAppBar> {
           NavigationDestination(icon: Icon(Iconsax.user), label: "Account"),
         ],
       ),
-      body: MyWidgets().screen[_selectedIndex],
     );
-  }
-}
-
-class MyWidgets extends StatelessWidget {
-  MyWidgets({super.key});
-  List screen = [
-    Container(
-      color: Colors.white,
-    ),
-    Container(
-      color: const Color.fromARGB(255, 12, 173, 146),
-    ),
-    Container(
-      color: Colors.red,
-    ),
-    Container(
-      color: const Color.fromARGB(255, 255, 121, 165),
-    )
-  ];
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
   }
 }
