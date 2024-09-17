@@ -137,11 +137,14 @@ class homeView extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            "Green Nike Sport Shoe",
-                            style: Theme.of(context).textTheme.labelLarge,
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 2,
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8.0),
+                            child: Text(
+                              "Green Nike Sport Shoe",
+                              style: Theme.of(context).textTheme.labelLarge,
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 2,
+                            ),
                           ),
                           const SizedBox(
                             height: CSizes.spaceBtwItems / 2,
@@ -163,7 +166,7 @@ class homeView extends StatelessWidget {
                             ],
                           ),
                           const SizedBox(
-                            height: CSizes.spaceBtwItems / 2,
+                            height: CSizes.spaceBtwItems / 5,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
