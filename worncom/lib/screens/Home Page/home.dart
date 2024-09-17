@@ -78,7 +78,7 @@ class homeView extends StatelessWidget {
                         shrinkWrap: true,
                         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2,
-                            mainAxisExtent: 310,
+                            mainAxisExtent: 283,
                             mainAxisSpacing: CSizes.gridViewSpacing * 2,
                             crossAxisSpacing: CSizes.gridViewSpacing),
                         itemCount: 4,
