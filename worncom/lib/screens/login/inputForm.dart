@@ -55,7 +55,7 @@ class _inputFormState extends State<inputForm> {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => const homeView(),
+            builder: (context) => homeView(),
           ),
         );
       }

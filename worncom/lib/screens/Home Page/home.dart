@@ -1,15 +1,18 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:worncome/components/appBar/customAppBar.dart';
 import 'package:worncome/components/bottomNavBar/bottomAppBar.dart';
 import 'package:worncome/components/header/headerSearchBar.dart';
 import 'package:worncome/components/header/positionedBlocks.dart';
 import 'package:worncome/components/header/productCategories.dart';
+import 'package:worncome/components/rounded_image.dart';
 import 'package:worncome/utils/constants/colors.dart';
 import 'package:worncome/utils/constants/image_strings.dart';
 import 'package:worncome/utils/constants/sizes.dart';
 
 class homeView extends StatelessWidget {
-  const homeView({super.key});
+  homeView({super.key});
+  int currentindex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -59,14 +62,26 @@ class homeView extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(CSizes.defaultSpace),
-              child: Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(CSizes.md),
-                ),
-                child: ClipRRect(
-                    borderRadius: BorderRadius.circular(CSizes.md),
-                    child: const Image(image: AssetImage(CImages.promoBanner3))),
+              child: Column(
+                children: [
+                  CarouselSlider(
+                    items: const [
+                      roundedImage(
+                        imagepath: CImages.promoBanner1,
+                      ),
+                      roundedImage(
+                        imagepath: CImages.promoBanner2,
+                      ),
+                      roundedImage(
+                        imagepath: CImages.promoBanner3,
+                      ),
+                    ],
+                    options: CarouselOptions(
+                      viewportFraction: 1,
+                      autoPlay: true,
+                    ),
+                  ),
+                ],
               ),
             )
           ],
@@ -75,5 +90,3 @@ class homeView extends StatelessWidget {
     );
   }
 }
-
-List caticon = [];
