@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:worncome/components/appBar/customAppBar.dart';
+import 'package:worncome/components/bottomNavBar/bottomAppBar.dart';
 import 'package:worncome/components/header/headerSearchBar.dart';
 import 'package:worncome/components/header/positionedBlocks.dart';
 import 'package:worncome/components/header/productCategories.dart';
@@ -12,6 +13,7 @@ class homeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: bottomAppBar(),
       body: SingleChildScrollView(
         child: Column(
           children: [
