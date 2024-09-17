@@ -5,6 +5,7 @@ import 'package:worncome/components/header/headerSearchBar.dart';
 import 'package:worncome/components/header/positionedBlocks.dart';
 import 'package:worncome/components/header/productCategories.dart';
 import 'package:worncome/utils/constants/colors.dart';
+import 'package:worncome/utils/constants/image_strings.dart';
 import 'package:worncome/utils/constants/sizes.dart';
 
 class homeView extends StatelessWidget {
@@ -31,12 +32,12 @@ class homeView extends StatelessWidget {
                           child: CustomAppBar(),
                         ),
                         const SizedBox(
-                          height: CSizes.spaceBtwSections,
+                          height: CSizes.spaceBtwSections / 2,
                         ),
 
                         // Search Bar
                         const headerSearchBar(),
-                        SizedBox(height: CSizes.spaceBtwSections),
+                        const SizedBox(height: CSizes.spaceBtwSections / 1.4),
 
                         // Categories Section
                         Text(
@@ -56,6 +57,18 @@ class homeView extends StatelessWidget {
                 ],
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.all(CSizes.defaultSpace),
+              child: Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(CSizes.md),
+                ),
+                child: ClipRRect(
+                    borderRadius: BorderRadius.circular(CSizes.md),
+                    child: const Image(image: AssetImage(CImages.promoBanner3))),
+              ),
+            )
           ],
         ),
       ),
