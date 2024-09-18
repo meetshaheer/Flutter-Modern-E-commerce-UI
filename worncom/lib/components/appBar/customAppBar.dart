@@ -35,7 +35,7 @@ class CustomAppBar extends StatelessWidget {
               backgroundColor: CColors.dark,
               label: Text(
                 "2",
-                style: TextStyle(color: dark ? CColors.light : CColors.dark),
+                style: TextStyle(color: CColors.light),
               ),
               child: Icon(Iconsax.shopping_bag),
             ),
