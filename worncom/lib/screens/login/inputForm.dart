@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:worncome/controller/pageController.dart';
 import 'package:worncome/screens/Home%20Page/home.dart';
 import 'package:worncome/screens/forgot%20password/forgotPassword.dart';
 import 'package:worncome/screens/signup/signup.dart';
@@ -55,7 +56,7 @@ class _inputFormState extends State<inputForm> {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => homeView(),
+            builder: (context) => pageController(),
           ),
         );
       }

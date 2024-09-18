@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:worncome/utils/constants/colors.dart';
+import 'package:worncome/utils/constants/list2.dart';
 import 'package:worncome/utils/constants/sizes.dart';
 
 class productCategories extends StatelessWidget {
@@ -12,12 +13,13 @@ class productCategories extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Padding(
-        padding: const EdgeInsets.only(left: CSizes.defaultSpace),
+        padding: EdgeInsets.only(left: CSizes.defaultSpace),
         child: ListView.builder(
           shrinkWrap: true,
           scrollDirection: Axis.horizontal,
-          itemCount: 10,
+          itemCount: categoryData.length,
           itemBuilder: (context, index) {
+            var category = categoryData[index];
             return Padding(
               padding: const EdgeInsets.only(right: CSizes.spaceBtwItems),
               child: Column(
@@ -29,13 +31,14 @@ class productCategories extends StatelessWidget {
                       color: CColors.light,
                       borderRadius: BorderRadius.circular(100),
                     ),
-                    child: IconButton(onPressed: () {}, icon: Icon(Iconsax.shield_cross)),
+                    child: IconButton(
+                        onPressed: () {}, icon: Image(width: CSizes.iconMd, image: AssetImage(category.iconurl))),
                   ),
                   const SizedBox(
                     height: CSizes.spaceBtwItems / 2,
                   ),
                   Text(
-                    "Shoes",
+                    category.catName,
                     style: Theme.of(context).textTheme.labelLarge!.copyWith(
                           color: CColors.light,
                         ),

@@ -46,6 +46,7 @@ class accountSettign extends StatelessWidget {
                 ],
               ),
             ),
+           
             Padding(
               padding: const EdgeInsets.only(
                 top: CSizes.defaultSpace * 2,
