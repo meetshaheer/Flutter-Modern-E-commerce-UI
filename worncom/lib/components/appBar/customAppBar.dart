@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:worncome/utils/constants/colors.dart';
 import 'package:worncome/utils/constants/sizes.dart';
+import 'package:worncome/utils/theme/theme.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
@@ -10,6 +11,7 @@ class CustomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool dark = CAppTheme.isDarkMode(context);
     return AppBar(
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,9 +31,12 @@ class CustomAppBar extends StatelessWidget {
           padding: const EdgeInsets.only(top: CSizes.sm),
           child: IconButton(
             onPressed: () {},
-            icon: const Badge(
+            icon: Badge(
               backgroundColor: CColors.dark,
-              label: Text("2"),
+              label: Text(
+                "2",
+                style: TextStyle(color: dark ? CColors.light : CColors.dark),
+              ),
               child: Icon(Iconsax.shopping_bag),
             ),
           ),

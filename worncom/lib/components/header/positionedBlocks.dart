@@ -7,9 +7,13 @@ class headerPositionedBlock extends StatelessWidget {
     super.key,
     required this.child,
     this.height,
+    this.top,
+    this.right,
   });
   final Widget child;
   final double? height;
+  final double? top;
+  final double? right;
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +24,8 @@ class headerPositionedBlock extends StatelessWidget {
       padding: const EdgeInsets.all(0),
       child: Stack(
         children: [
-          const Positioned(top: -150, right: -250, child: customShapeWidget()),
-          const Positioned(top: 100, right: -300, child: customShapeWidget()),
+          Positioned(top: top ?? -150, right: right ?? -250, child: customShapeWidget()),
+          Positioned(top: top ?? 100, right: right ?? -300, child: customShapeWidget()),
           child
         ],
       ),
